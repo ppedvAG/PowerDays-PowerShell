@@ -57,9 +57,20 @@ Wichtig ist hier das InformationLevel Quiet welches dafür sorgt das nur True od
 
 #Mit einer Validate Range wird der Minimale under Maximale Werte vorgegeben
 [ValidateRange(5,10)]
-[int]$Newest = 5
+[int]$Newest = 5,
+
+<#Validate Pattern auch Regular Expressions genannt validieren Textzeichenfolgen
+    [F] defniert das der erste Buchstabe ein F sein muss. Key Sensitiv !
+    [-] defniert das das zweite Zeichen in "-" sein muss
+    \d{3} defniert das die nächsten drei Zeichen Dezimal Zahlen sein müssen
+    \.txt defniert das die letzten zeichen .txt sein müssen
+    F-001.txt wäre ein Valider Wert
+    D-1234.txt  wäre nicht Valide weil es nicht mit F beginnt und 4 dezimale Stellen hat anstelle von 3
+#>
+[ValidatePattern("[F][-]\d{3}\.txt")]
+[string]$FileName
 )
-$Newest = 3
+
 #Write-Verbose bietet eine Zusatzausgabe welche nur bei BEdarf mit -Verbose ausgegeben wird
 Write-Verbose -Message "Vom User wurde angegeben. $Logname, $Computername, $EventId, $Newest"
 Get-EventLog -LogName $LogName -ComputerName $Computername | Where-Object EventId -eq $EventId | Select-Object -First $Newest
