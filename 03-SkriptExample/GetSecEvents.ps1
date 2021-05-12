@@ -47,6 +47,7 @@ param(
 
 [string]$Computername = "localhost",
 
+[ValidateSet(4624,4625,4634)] #Ein ValidateSet gibt die möglichen Werte vor
 [Parameter(Mandatory=$true)] #Durch Mandatory True wird der Parameter zu einem Pflicht Parameter
 [int]$EventId,
 
