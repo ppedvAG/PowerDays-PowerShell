@@ -55,9 +55,11 @@ Wichtig ist hier das InformationLevel Quiet welches dafür sorgt das nur True od
 [Parameter(Mandatory=$true)] #Durch Mandatory True wird der Parameter zu einem Pflicht Parameter
 [int]$EventId,
 
-[int]$Newest = 10
+#Mit einer Validate Range wird der Minimale under Maximale Werte vorgegeben
+[ValidateRange(5,10)]
+[int]$Newest = 5
 )
-
+$Newest = 3
 #Write-Verbose bietet eine Zusatzausgabe welche nur bei BEdarf mit -Verbose ausgegeben wird
 Write-Verbose -Message "Vom User wurde angegeben. $Logname, $Computername, $EventId, $Newest"
 Get-EventLog -LogName $LogName -ComputerName $Computername | Where-Object EventId -eq $EventId | Select-Object -First $Newest
