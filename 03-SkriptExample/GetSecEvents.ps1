@@ -41,7 +41,7 @@
    95234 Mai 12 14:39  SuccessA... Microsoft-Windows...         4634 Ein Konto wurde abgemeldet....
 
 #>
-[cmdletBinding()]
+[cmdletBinding(PositionalBinding=$false)] #Weißt die Powershell erweiterte cmdlet Funktionen zu laden. PostionalBinding = $false definiert das keinem Parameter automatisch Postionen zugewiesen werden.
 param(
 [string]$LogName = "Security",
 
@@ -52,7 +52,7 @@ Wichtig ist hier das InformationLevel Quiet welches dafür sorgt das nur True od
 [string]$Computername = "localhost",
 
 [ValidateSet(4624,4625,4634)] #Ein ValidateSet gibt die möglichen Werte vor
-[Parameter(Mandatory=$true)] #Durch Mandatory True wird der Parameter zu einem Pflicht Parameter
+[Parameter(Mandatory=$true,Position=0)] #Durch Mandatory True wird der Parameter zu einem Pflicht Parameter. Mit Position wir die Position des Parameter angegeben
 [int]$EventId,
 
 #Mit einer Validate Range wird der Minimale under Maximale Werte vorgegeben
