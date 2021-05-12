@@ -45,6 +45,10 @@
 param(
 [string]$LogName = "Security",
 
+<#Das Validate Script ermöglicht "manuelle" Validierung von Parametern wenn die Standard Validates nicht ausreichen. 
+In diesem Fall wird Test-Netconnection verwendet um zu überprüfen ob der Rechner für PS Remoting überhaupt erreichbar ist,
+Wichtig ist hier das InformationLevel Quiet welches dafür sorgt das nur True oder False ausgegeben wird #>
+[ValidateScript({Test-NetConnection -ComputerName $PSItem -CommonTCPPort WinRM -InformationLevel Quiet})]
 [string]$Computername = "localhost",
 
 [ValidateSet(4624,4625,4634)] #Ein ValidateSet gibt die möglichen Werte vor
