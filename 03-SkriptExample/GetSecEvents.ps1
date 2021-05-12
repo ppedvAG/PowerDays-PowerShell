@@ -1,13 +1,13 @@
 ﻿[cmdletBinding()]
 param(
-$LogName = "Security",
+[string]$LogName = "Security",
 
-$Computername = "localhost",
+[string]$Computername = "localhost",
 
 [Parameter(Mandatory=$true)] #Durch Mandatory True wird der Parameter zu einem Pflicht Parameter
-$EventId,
+[int]$EventId,
 
-$Newest = 10
+[int]$Newest = 10
 )
 
 Get-EventLog -LogName $LogName -ComputerName $Computername | Where-Object EventId -eq $EventId | Select-Object -First $Newest
