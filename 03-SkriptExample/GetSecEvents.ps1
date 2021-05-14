@@ -41,7 +41,7 @@
    95234 Mai 12 14:39  SuccessA... Microsoft-Windows...         4634 Ein Konto wurde abgemeldet....
 
 #>
-[cmdletBinding(PositionalBinding=$false)] #Weißt die Powershell erweiterte cmdlet Funktionen zu laden. PostionalBinding = $false definiert das keinem Parameter automatisch Postionen zugewiesen werden.
+[cmdletBinding(PositionalBinding=$false)] #Weißt die Powershell erweiterte cmdlet Funktionen zu laden. PostionalBinding = $false definiert das keinem Parameter automatisch Postionen zugewiesen werden. https://docs.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute?view=powershell-5.1
 param(
 [string]$LogName = "Security",
 
