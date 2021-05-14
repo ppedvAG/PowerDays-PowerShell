@@ -41,8 +41,11 @@ New-Item -Path $TestFilesPath -ItemType Directory
 
 New-TestFiles -Path $TestFilesPath -FileCount $FileCount
 
+Write-Debug -Message "Vor Ordnerschleife"
+
 for($i = 1; $i -le $DirCount; $i++)
 {
+    
     $DirNumber = "{0:D3}" -f $i
     
     New-Item -Path $TestFilesPath -Name "Ordner$DirNumber" -ItemType Directory
