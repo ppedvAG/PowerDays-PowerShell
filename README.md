@@ -4,25 +4,26 @@ Kursbegleitender Inhalt zum 4 tägigen Kurs PowerDays - PowerShell
 https://ppedv.de/schulung/kurse/WindowsPowerShellCorecmdletScriptWMIlernenFortgeschrittenWorkflowProgrammierungSeminarTraining.aspx
 
 Agenda:
-Einführung in Windows PowerShell
-Cmdlets
-PowerShell Profile
-Grundlegende Sprachelemente
-Windows Management Instrumentation (WMI)
-Eigene PowerShell-Skripte erstellen
-PowerShell Remoting
-Neues in PowerShell 4 und Powershell 5
-Einführung in fortgeschrittene PowerShell Techniken
-Skript Editoren
-Einstieg in die Versionskontrolle mit GIT
-Erweiterte Skripting Techniken
-Erstellen eigener PowerShell Module
-PowerShell Provider
-Desired State Configuration (DSC)-Erweiterung
-PowerShell Workflows
-.NET in PowerShell
-PowerShell Klassen
-Enums in PowerShell
+
+- Einführung in Windows PowerShell
+- Cmdlets
+- PowerShell Profile
+- Grundlegende Sprachelemente
+- Windows Management Instrumentation (WMI)
+- Eigene PowerShell-Skripte erstellen
+- PowerShell Remoting
+- Neues in PowerShell 4 und Powershell 5
+- Einführung in fortgeschrittene PowerShell Techniken
+- Skript Editoren
+- Einstieg in die Versionskontrolle mit GIT
+- Erweiterte Skripting Techniken
+- Erstellen eigener PowerShell Module
+- PowerShell Provider
+- Desired State Configuration (DSC)-Erweiterung
+- PowerShell Workflows
+- .NET in PowerShell
+- PowerShell Klassen
+- Enums in PowerShell
 
 Diese Microsoft PowerShell Schulung macht Sie mit den Grundlagen der Skriptingumgebung bestens vertraut und zeigt Ihnen, wie Sie damit effizient Verwaltungs- und Automatisierungsaufgaben erledigen können.
 
